@@ -1,0 +1,350 @@
+/*------------------------------ GENERAL ----------------*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: sans-serif, arial;
+    font-size: 14px;
+    background: rgb(1, 31, 75);
+    color: white;
+}
+
+.inline {
+    display: inline-block;
+}
+
+h2 {
+    border: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+
+/*------------------------------ NAV ----------------*/
+
+nav {
+    padding-top: 20px;
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background: #005b96;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    border-radius: 30px;
+}
+
+
+/*------------------------------ HEADER ----------------*/
+
+
+header {
+    background: black url("header1.png") center center no-repeat;
+    background-size: cover;
+    color: white;
+    background-size: 100%;
+}
+
+header h1 {
+    line-height: 20vh;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.img {
+    position: relative;
+    margin: 10vh auto 5vh auto;
+    height: 25%;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#auth-bg {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#auth {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.auth-point {
+    flex: 1 0 88px;
+    border: solid 1px black;
+    border-radius: 50%;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+
+.auth-point:hover {
+    background-color: deepskyblue;
+}
+
+.auth-point.in-path {
+    background-color: darkslateblue;
+}
+
+.auth-point.in-path.path-ok {
+    background-color: green;
+}
+
+.auth-point.in-path.path-nok {
+    background-color: crimson;
+}
+
+svg {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    height: 100%;
+    width: 100%;
+    border: solid 3px darkblue;
+    pointer-events: none;
+    border-radius: 45px;
+}
+
+
+/*------------------------------ ACCUEIL ----------------*/
+
+#connect {
+    background: #005b96;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 20px 10vw 20px 0;
+    padding: 15px;
+    text-align: center;
+}
+
+#connect.div.div {
+    display: block;
+}
+
+label {
+    display: block;
+}
+
+
+/*------------------------------ Post ----------------*/
+#allPosts h2 {
+    margin: 20px;
+}
+
+.post {
+    background: black;
+    margin: 20px 0;
+}
+
+.post:nth-child(even) {
+    margin-left: 20vw;
+    text-align: right;
+    padding: 20px 0px 20px 20px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    animation-name: slideleft;
+    animation-duration: 2s;
+}
+
+.post:nth-child(odd) {
+    margin-right: 20vw;
+    padding: 20px 20px 20px 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    animation-name: slideright;
+    animation-duration: 2s;
+}
+
+.post h2 {
+    margin: 5px;
+}
+
+.post h3 {
+    margin: 10px;
+    padding: 0 30px;
+}
+
+.post p {
+    margin: 0 10px;
+}
+
+.comment {
+    margin: 20px;
+    background: #353535;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.comment h4 {
+}
+
+.comment h5 {
+    margin: 10px 0 5px 5px;
+}
+
+.comment p {
+    margin: 15px 0px 0px 20px;
+}
+
+/*------------------------------ ARTICLES ----------------*/
+
+#bienvenu {
+    text-align: center;
+}
+
+article {
+    position: relative;
+    background-color: rgb(105, 174, 214);
+    color: white;
+    margin: 100px auto;
+    animation-duration: 1s;
+    animation-name: pop;
+}
+
+article:nth-child(even) {
+    margin-left: 20vw;
+    text-align: right;
+    padding: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+
+article:nth-child(odd) {
+    text-align: left;
+    margin-right: 20vw;
+    padding: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+article h3 {
+    position: absolute;
+    top: -80px;
+    background-color: rgb(86, 130, 155);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 5px 20px;
+    font-size: large;
+    opacity: 0.99;
+    z-index: -1;
+    height: 90px;
+    max-width: 70%;
+    vertical-align: middle;
+}
+
+article:nth-child(even) h3 {
+    right: 0px;
+}
+
+article img {
+    padding: 5px;
+    border-radius: 10px;
+    transition: transform .2s;
+    animation-duration: 2s;
+    animation-name: pop;
+}
+
+
+article img:hover {
+    transform: scale(1.5);
+}
+
+/*------------------------------ Infos ----------------*/
+
+#infos {
+    text-align: center;
+    width: 20%;
+    min-width: 250px;
+    margin: 20px auto;
+    animation-duration: 2s;
+    animation-name: pop;
+}
+
+#infos label {
+    text-align: left;
+    color: white;
+}
+
+#infos input {
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px 0;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px rgb(100, 151, 177);
+    outline: none;
+    transition: linear 0.3s;
+    color: white;
+}
+
+#infos input:focus {
+    border-bottom: solid 3px white;
+}
+
+#infos div {
+    padding: 10px 0;
+}
+
+/*------------------------------ Annimations ----------------*/
+
+
+@keyframes pop {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideright {
+    from {
+        margin-right: 100%;
+        opacity: 0;
+    }
+
+    to {
+        margin-right: 20vw;
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideleft {
+    from {
+        margin-left: 100%;
+        opacity: 0;
+    }
+
+    to {
+        margin-left: 20vW;
+        opacity: 1;
+    }
+}
+
+
+
