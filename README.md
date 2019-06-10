@@ -31,4 +31,4 @@ Si toutes les informations sont bonnes vous serez redirigé sur vos photos.
 
 Je vous laisse le soin ensuite de visiter et profiter des animations que j'ai réalisé personnellement.
 
-# Pour tout contact vous trouverez un formulaire de contact sur mon nouveau site https://nicolasduwavrent.blog
+## Pour tout contact vous trouverez un formulaire de contact sur mon nouveau site https://nicolasduwavrent.blog
